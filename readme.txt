@@ -5,12 +5,16 @@ SSL isnt supported.
 Depends on jsonrpc4minetestlua mod.
 Needs a full dogecoin node up and synced,running as daemon and
 the user and password must be set in minetest.conf as below:
-doge.rpcuser=<rpcuser>
-doge.rpcpassword=<rpcpassword>
+
+Required config:
+
+    doge.rpcuser=<rpcuser>
+    doge.rpcpassword=<rpcpassword>
 
 Optional:
-doge.rpcport=<rpcport> (deafult:44555(testnet))
-doge.rpcaddress=<rpcaddress> (deafult:127.0.0.1)
+
+    doge.rpcport=<rpcport> (deafult:44555(testnet))
+    doge.rpcaddress=<rpcaddress> (deafult:127.0.0.1)
 
 It also implements some features:
 dogecoin.url
