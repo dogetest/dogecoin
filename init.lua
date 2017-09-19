@@ -16,14 +16,7 @@ dogecoin.url='http://'..
   '@'..rpcaddress..
   ':'..rpcport
 
-local send=function(from, to, amount, reason)
-  local proxy=rpc.proxy(dogecoin.url)
-  proxy.sendmany(from, {[to]=amount, }, 1, reason)
-end
-
 dogecoin.transfer=function(from, to, amount, reason)
-  local proxy=rpc.proxy(dogecoin.url, function(res)
-    send(from, res, amount, reason)
-    end)
-  proxy.getnewaddress(to)
+  local proxy=rpc.proxy(dogecoin.url)
+  proxy.move(from, to, amount, 1, reason)
 end
